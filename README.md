@@ -3,7 +3,7 @@ A responsive and interactive Age Calculator built using HTML, CSS, and JavaScrip
 The application calculates a person's exact age in **years, months, and days** based on their date of birth and a selected current date.
 
 ## Live Demo
-Coming soon...
+[Visit Age Calculator](https://age-calculator-eta-mauve.vercel.app)
 
 ## Features
 - Calculate age in years, months, and days
