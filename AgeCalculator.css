@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(circle at 15% 20%, #f7d6ff 0%, transparent 30%),
+        radial-gradient(circle at 85% 25%, #cfe3ff 0%, transparent 35%),
+        linear-gradient(135deg, #ffdff2, #ddd8ff, #cfe7ff);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    color: #171a45;
+}
+
+
+/* Background Decorations */
+
+.background-decoration {
+    position: fixed;
+    border-radius: 50%;
+    opacity: 0.35;
+    z-index: -1;
+}
+
+.decoration-one {
+    width: 220px;
+    height: 220px;
+    background: #c8b5ff;
+    left: -80px;
+    bottom: -80px;
+}
+
+.decoration-two {
+    width: 250px;
+    height: 250px;
+    background: #a9d7ff;
+    right: -80px;
+    top: -80px;
+}
+
+
+/* Main Page */
+
+.page {
+    width: 100%;
+    max-width: 900px;
+
+    padding: 20px;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+
+    text-align: left;
+}
+
+.calendar-icon {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #ff7aa9,
+        #9b6cff
+    );
+
+    border-radius: 17px;
+
+    color: white;
+
+    font-size: 29px;
+
+    box-shadow:
+        0 10px 25px rgba(111, 83, 200, 0.25);
+}
+
+.header h1 {
+    font-size: 42px;
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    color: #17183f;
+}
+
+.header p {
+    margin-top: 2px;
+
+    font-size: 16px;
+
+    color: #62678e;
+}
+
+
+/* Main Card */
+
+.calculator-card {
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-radius: 28px;
+
+    padding: 28px 45px 22px;
+
+    box-shadow:
+        0 25px 55px rgba(70, 55, 140, 0.18);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+
+/* Date Sections */
+
+.date-section {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+.section-icon {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    font-size: 25px;
+}
+
+.birth-icon {
+    background: #ffe0e8;
+}
+
+.current-icon {
+    background: #dceaff;
+}
+
+.section-content {
+    flex: 1;
+}
+
+.section-content label {
+    display: block;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #171a45;
+
+    margin-bottom: 2px;
+}
+
+.section-content p {
+    color: #666b8f;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+
+/* Date Input */
+
+input[type="date"] {
+    width: 100%;
+
+    height: 46px;
+
+    padding: 10px 14px;
+
+    border: 2px solid #d9dced;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #202344;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input[type="date"]:focus {
+    border-color: #8064e9;
+
+    box-shadow:
+        0 0 0 4px rgba(128, 100, 233, 0.12);
+}
+
+
+/* Calculate Button */
+
+.calculate-button {
+    width: 100%;
+
+    height: 52px;
+
+    margin-top: 2px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: linear-gradient(
+        90deg,
+        #7b4df5,
+        #438ef5
+    );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 22px rgba(91, 91, 220, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+.calculate-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 26px rgba(91, 91, 220, 0.35);
+}
+
+.calculate-button:active {
+    transform: translateY(0);
+}
+
+
+/* Result */
+
+.result-box {
+    margin-top: 18px;
+
+    padding: 18px 15px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #e1f8f1,
+        #dff5ff
+    );
+
+    border: 1px solid rgba(150, 220, 210, 0.4);
+}
+
+.result-title {
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #1c2452;
+
+    margin-bottom: 7px;
+}
+
+.age-result {
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: #5b45d6;
+
+    line-height: 1.2;
+}
+
+
+/* Footer */
+
+.footer-message {
+    text-align: center;
+
+    margin-top: 12px;
+
+    color: #73789e;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .page {
+        padding: 18px 14px;
+    }
+
+    .header {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 8px;
+
+        margin-bottom: 15px;
+    }
+
+    .calendar-icon {
+        width: 52px;
+        height: 52px;
+
+        font-size: 24px;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .calculator-card {
+        padding: 25px 18px 20px;
+
+        border-radius: 23px;
+    }
+
+    .date-section {
+        gap: 12px;
+
+        margin-bottom: 18px;
+    }
+
+    .section-icon {
+        width: 45px;
+        height: 45px;
+
+        font-size: 20px;
+    }
+
+    .section-content label {
+        font-size: 18px;
+    }
+
+    .section-content p {
+        font-size: 12px;
+    }
+
+    input[type="date"] {
+        height: 44px;
+
+        font-size: 15px;
+    }
+
+    .calculate-button {
+        height: 48px;
+
+        font-size: 17px;
+    }
+
+    .result-box {
+        padding: 18px 10px;
+    }
+
+    .result-title {
+        font-size: 17px;
+    }
+
+    .age-result {
+        font-size: 23px;
+    }
+
+    .footer-message {
+        font-size: 12px;
+    }
+}

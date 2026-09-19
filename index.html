@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Age Calculator</title>
+
+    <link rel="stylesheet" href="AgeCalculator.css">
+</head>
+
+<body>
+
+    <div class="background-decoration decoration-one"></div>
+    <div class="background-decoration decoration-two"></div>
+
+    <main class="page">
+
+        <header class="header">
+            <div class="calendar-icon">♥</div>
+
+            <div>
+                <h1>Age Calculator</h1>
+                <p>Because every moment counts 💙</p>
+            </div>
+        </header>
+
+        <section class="calculator-card">
+
+            <!-- Date of Birth -->
+            <div class="date-section">
+
+                <div class="section-icon birth-icon">
+                    🎂
+                </div>
+
+                <div class="section-content">
+
+                    <label for="dob">
+                        Date of Birth
+                    </label>
+
+                    <p>Select your date of birth</p>
+
+                    <input
+                        type="date"
+                        id="dob"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Current Date -->
+            <div class="date-section">
+
+                <div class="section-icon current-icon">
+                    📅
+                </div>
+
+                <div class="section-content">
+
+                    <label for="currentDate">
+                        Current Date
+                    </label>
+
+                    <p>Today's date (you can edit if needed)</p>
+
+                    <input
+                        type="date"
+                        id="currentDate"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Calculate Button -->
+            <button class="calculate-button" onclick="calculateAge()">
+                Calculate Age
+            </button>
+
+
+            <!-- Result -->
+            <div class="result-box">
+
+                <div class="result-title">
+                    🎉 &nbsp; Your age is:
+                </div>
+
+                <div id="ageResult" class="age-result">
+                    -- years, -- months, -- days
+                </div>
+
+            </div>
+
+            <p class="footer-message">
+                — ❤️ Every day is a new chapter ❤️ — 
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="AgeCalculator.js"></script>
+
+</body>
+</html>
